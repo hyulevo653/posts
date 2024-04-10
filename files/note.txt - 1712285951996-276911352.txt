@@ -1,0 +1,15 @@
+Đánh lại theo chương,tên bảng ghi lên trên /
+
+Các đầu mục sai định dạng /
+
+Chi tiết trang,kko để mỗi trang 1 hình, co giãn hợp lý /
+
+Định dạng lại format toàn bài, lề trên dưới /
+
+Số trang đưa lên header căn giữa /
+
+Headeing 5 sửa  thành abcd /
+
+Bổ sung tài liệu liên hệ /
+
+Sửa bìa /
