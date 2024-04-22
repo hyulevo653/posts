@@ -1,0 +1,24 @@
+<ul class="items-footer">
+    <li class="item">
+        <div class="wapper">
+            <img src="../images/homecashplus/place_24px.png" />
+        </div>
+        <a href="@Model.LinkOther1">@Model.Address</a>
+    </li>
+    <li class="item">
+        <div class="wapper">
+            <img src="../images/homecashplus/tax.png">
+        </div>
+        <a href="fax:@Model.TechNiQuePhone">@Model.TechNiQuePhone</a>
+    </li>
+    <li class="item">
+        <div class="wapper"><img src="../images/homecashplus/call-icon2.png" /></div>
+        <a href="tel:@Model.GuaRanTeePhone">@Model.GuaRanTeePhone</a>
+    </li>
+    <li class="item">
+        <div class="wapper">
+            <img src="../images/homecashplus/mail.png">
+        </div>
+        <a href="mailto:@(Model.Hotmail)">@Model.Hotmail</a>
+    </li>
+</ul>

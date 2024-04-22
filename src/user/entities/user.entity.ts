@@ -13,15 +13,19 @@ export class User {
   @PrimaryGeneratedColumn()
   id: number;
   
-  @Column()
+  @Column({ default: 'default@example.com' })
+  @ApiProperty({example: 'duchuy@gmail.com'})
   email: string;
 
-  @Column()
+  @Column({ default: '123456' })
+  @ApiProperty({example: '123456'})
   @Exclude()
   password: string;
-  @Column()
+  @Column({ nullable: true })
+  @ApiProperty({example: 'Duc'})
   firstName : string;
-  @Column()
+  @Column({ nullable: true })
+  @ApiProperty({example: 'Huy'})
   lastName: string;
 
   @Column({default: ROLES.USER})

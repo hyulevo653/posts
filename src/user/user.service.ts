@@ -42,4 +42,12 @@ export class UserService {
   async remove(id: number): Promise<void> {
     await this.usersRepository.delete(id);
   }
+
+  async findAllPaginated(page: number, perPage: number): Promise<{ data: User[], total: number }> {
+    const [data, total] = await this.usersRepository.findAndCount({
+      skip: (page - 1) * perPage,
+      take: perPage,
+    });
+    return { data, total };
+  }
 }

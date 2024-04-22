@@ -9,7 +9,7 @@ import { extname } from 'path';
 @Controller('file')
 export class UploadController {
   constructor(private readonly uploadService: UploadService) {}
-  @Post()
+  @Post('/upload')
   @UseInterceptors(
     FileInterceptor('file', {
       storage: diskStorage({
@@ -18,7 +18,7 @@ export class UploadController {
           const uniqueSuffix =
             Date.now() + '-' + Math.round(Math.random() * 1e9);
           const ext = extname(file.originalname);
-          const filename = `${uniqueSuffix}${ext}`;
+          const filename = `${file.originalname}`;
           callback(null, filename);
         },
       }),

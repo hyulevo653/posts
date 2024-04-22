@@ -16,6 +16,7 @@ export class AuthGuard implements CanActivate {
 
     //1 get token from header
     const token = request.headers.authorization.split(' ')[1];
+    console.log(token);
     if(!token){
       throw new BadRequestException('Please provide access token');
     }
@@ -29,6 +30,7 @@ export class AuthGuard implements CanActivate {
     if(!user){
       throw new BadRequestException("User not belong to token,please try again");
     }
+    request.currentUser = user;
     //4 Asssign user to request object
     } catch (error) {
       throw new ForbiddenException('Invalid token or expired');

@@ -3,7 +3,7 @@ import { JwtService } from "@nestjs/jwt";
 import { RegisterUserDto } from "src/user/dto/register-user.dto";
 import { UserService } from "src/user/user.service";
 import * as bcrypt from 'bcrypt';
-import { LoginUserDto } from "src/user/dto/login-user.dto";
+import { LoginUserDto } from "./dto/login-user.dto";
 
 @Injectable()
 export class AuthService{
@@ -68,10 +68,4 @@ export class AuthService{
             }
 
     }
-    login(){
-        return{
-            message : 'login account'
-        }
-    }
-    
 }
